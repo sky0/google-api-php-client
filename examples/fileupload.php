@@ -24,7 +24,7 @@ require_once realpath(dirname(__FILE__) . '/../autoload.php');
  ************************************************/
 DEFINE("TESTFILE", 'testfile.txt');
 if (!file_exists(TESTFILE)) {
-  $fh = fopen(TESTFILE, 'w');
+  $fh = fopen(TESTFILE, 'w');   
   fseek($fh, 1024*1024*20);
   fwrite($fh, "!", 1);
   fclose($fh);
